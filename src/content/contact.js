@@ -1,5 +1,8 @@
 export const contact = {
   instagram: "https://instagram.com/lucky",
-  email: "hello@luckyedits.com",
-  whatsapp: "https://wa.me/15551234567",
+  email: "luckypanchbhai@gmail.com",
+  bookingEmail: "luckypanchbhai@gmail.com",
+  secondaryEmail: "jdseditorshub@gmail.com",
+  whatsappNumber: "+91 9130221204",
+  whatsapp: "https://wa.me/919130221204",
 };

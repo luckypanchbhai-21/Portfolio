@@ -6,6 +6,7 @@ import { useScrollSpy } from "../hooks/useScrollSpy.js";
 const links = [
   { label: "Home", href: "#home", id: "home" },
   { label: "About", href: "#about", id: "about" },
+  { label: "Software", href: "#software", id: "software" },
   { label: "Projects", href: "#projects", id: "projects" },
   { label: "Contact", href: "#contact", id: "contact" },
 ];
@@ -39,13 +40,20 @@ export default function Navbar() {
             <a
               key={link.id}
               href={link.href}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`relative rounded-full px-4 py-2 text-sm font-semibold transition ${
                 activeId === link.id
-                  ? "bg-white text-ink"
+                  ? "text-ink"
                   : "text-white/70 hover:bg-white/10 hover:text-white"
               }`}
             >
-              {link.label}
+              {activeId === link.id && (
+                <motion.span
+                  layoutId="active-nav-pill"
+                  className="absolute inset-0 rounded-full bg-white"
+                  transition={{ type: "spring", stiffness: 420, damping: 34 }}
+                />
+              )}
+              <span className="relative z-10">{link.label}</span>
             </a>
           ))}
         </div>

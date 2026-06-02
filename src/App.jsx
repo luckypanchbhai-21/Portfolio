@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer.jsx";
 import Loader from "./components/Loader.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Booking from "./pages/Booking.jsx";
 import About from "./sections/About.jsx";
 import Contact from "./sections/Contact.jsx";
 import Hero from "./sections/Hero.jsx";
 import Projects from "./sections/Projects.jsx";
+import Software from "./sections/Software.jsx";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const isBookingPage = window.location.pathname === "/book";
 
   useEffect(() => {
     const timer = window.setTimeout(() => setLoading(false), 900);
@@ -24,14 +27,21 @@ export default function App() {
         animate={{ opacity: loading ? 0 : 1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <Navbar />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
+        {isBookingPage ? (
+          <Booking />
+        ) : (
+          <>
+            <Navbar />
+            <main>
+              <Hero />
+              <About />
+              <Software />
+              <Projects />
+              <Contact />
+            </main>
+            <Footer />
+          </>
+        )}
       </motion.div>
     </div>
   );

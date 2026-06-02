@@ -1,0 +1,30 @@
+export const software = [
+  {
+    name: "Adobe After Effects",
+    role: "Motion Graphics & Visual Effects",
+    description: "Used for cinematic titles, kinetic typography, compositing, tracking, and polished visual treatments.",
+    logo: "Ae",
+    accent: "from-[#9999ff] to-[#d8b4fe]",
+    surface: "bg-[#1f1f54]",
+    text: "text-[#d8d8ff]",
+  },
+  {
+    name: "Adobe Premiere Pro",
+    role: "Professional Video Editing",
+    description: "Used for clean cuts, timeline editing, pacing, sound sync, social edits, and client-ready sequences.",
+    logo: "Pr",
+    accent: "from-[#8f7aff] to-[#58e6ff]",
+    surface: "bg-[#20144f]",
+    text: "text-[#ddd6ff]",
+  },
+  {
+    name: "DaVinci Resolve",
+    role: "Color Grading & Finishing",
+    description: "Used for color correction, cinematic grading, finishing polish, and final export quality control.",
+    logo: "DR",
+    accent: "from-[#58e6ff] via-[#b8ff6a] to-[#ff6b6b]",
+    surface: "bg-[#101827]",
+    text: "text-white",
+    resolve: true,
+  },
+];

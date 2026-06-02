@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "../components/Button.jsx";
 
@@ -50,27 +50,36 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
           className="relative"
         >
-          <div className="glass overflow-hidden rounded-lg p-3">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-panel">
-              <img
-                src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=1200&q=80"
-                alt="Video editing workspace"
-                loading="eager"
-                className="h-full w-full object-cover opacity-80"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
-              <motion.div
-                animate={{ scale: [1, 1.08, 1] }}
-                transition={{ duration: 2.4, repeat: Infinity }}
-                className="absolute left-1/2 top-1/2 grid h-20 w-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white text-ink shadow-glow"
-              >
-                <Play fill="currentColor" size={26} />
-              </motion.div>
-              <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-white/10 bg-black/35 p-4 backdrop-blur-md">
-                <p className="text-sm font-bold">Color. Cut. Captivate.</p>
-                  <p className="mt-1 text-xs text-white/60">
-                  Premium edits for brands, creators, and campaigns.
-                </p>
+          <div className="mx-auto max-w-md text-center">
+            <div className="relative mx-auto aspect-square max-w-sm">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-electric via-white/15 to-coral p-[2px] shadow-glow">
+                <div className="h-full w-full rounded-full bg-ink" />
+              </div>
+              <div className="absolute inset-4 overflow-hidden rounded-full border border-white/15 bg-panel shadow-2xl shadow-black/40">
+                <img
+                  src="/profile-photo.jpeg"
+                  alt="Lucky Panchbhai portrait"
+                  loading="eager"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-white/5" />
+              </div>
+            </div>
+
+            <div className="glass relative z-10 mx-auto -mt-10 max-w-sm rounded-lg p-5">
+              <p className="text-lg font-black">Lucky Panchbhai</p>
+              <p className="mt-2 text-sm leading-6 text-white/65">
+                Freelance video editor for brands, creators, and campaigns.
+              </p>
+              <div className="mt-4 flex flex-wrap justify-center gap-2">
+                {["Reels", "YouTube", "Brand Films"].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-bold text-electric"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

@@ -13,9 +13,15 @@ const cards = [
     icon: Instagram,
   },
   {
-    label: "Email",
-    value: contact.email,
+    label: "Primary Email",
+    value: "Send an email",
     href: `mailto:${contact.email}`,
+    icon: Mail,
+  },
+  {
+    label: "Editors Hub Email",
+    value: "Send an email",
+    href: `mailto:${contact.secondaryEmail}`,
     icon: Mail,
   },
   {
@@ -36,15 +42,15 @@ export default function Contact() {
           text="Send the brief, links, and deadline. Lucky can shape the footage into something sharp, modern, and platform-ready."
         />
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((item, index) => {
             const Icon = item.icon;
             return (
               <motion.a
                 key={item.label}
                 href={item.href}
-                target={item.label === "Email" ? undefined : "_blank"}
-                rel={item.label === "Email" ? undefined : "noreferrer"}
+                target={item.label.includes("Email") ? undefined : "_blank"}
+                rel={item.label.includes("Email") ? undefined : "noreferrer"}
                 initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -66,7 +72,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Button href={`mailto:${contact.email}`}>Book an edit</Button>
+          <Button href="/book">Book an edit</Button>
         </div>
       </div>
     </section>
