@@ -1,3 +1,5 @@
+/** @format */
+
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "../components/Button.jsx";
@@ -21,8 +23,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+          transition={{ duration: 0.8, ease: "easeOut" }}>
           <p className="mb-5 inline-flex rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-bold text-electric backdrop-blur">
             Freelance Video Editor
           </p>
@@ -30,9 +31,9 @@ export default function Hero() {
             Lucky edits videos that feel expensive, fast, and unforgettable.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Cinematic reels, creator videos, product launches, and scroll-stopping
-            social edits built with precise pacing, clean motion, and polished
-            sound design.
+            Cinematic reels, creator videos, product launches, and
+            scroll-stopping social edits built with precise pacing, clean
+            motion, and polished sound design.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <Button href="#projects">
@@ -48,8 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="relative"
-        >
+          className="relative">
           <div className="mx-auto max-w-md text-center">
             <div className="relative mx-auto aspect-square max-w-sm">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-electric via-white/15 to-coral p-[2px] shadow-glow">
@@ -57,7 +57,7 @@ export default function Hero() {
               </div>
               <div className="absolute inset-4 overflow-hidden rounded-full border border-white/15 bg-panel shadow-2xl shadow-black/40">
                 <img
-                  src="/profile-photo.jpeg"
+                  src="/profile-photo.png"
                   alt="Lucky Panchbhai portrait"
                   loading="eager"
                   className="h-full w-full object-cover"
@@ -75,8 +75,7 @@ export default function Hero() {
                 {["Reels", "YouTube", "Brand Films"].map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-bold text-electric"
-                  >
+                    className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-bold text-electric">
                     {item}
                   </span>
                 ))}
