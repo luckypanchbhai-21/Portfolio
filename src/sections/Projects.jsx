@@ -72,6 +72,22 @@ export default function Projects() {
             </div>
           ))}
         </div>
+
+        <div className="mt-20 flex justify-center">
+          <motion.a
+            href="https://youtube.com/@lucky_panchbhai?si=_peWYQc072AVbIdt"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 rounded-full bg-electric px-8 py-4 text-sm font-bold text-ink transition-all hover:bg-white hover:shadow-glow active:scale-95"
+          >
+            Check More Projects
+            <ExternalLink size={18} />
+          </motion.a>
+        </div>
       </div>
 
       <VideoModal
