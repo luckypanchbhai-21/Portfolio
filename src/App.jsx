@@ -9,6 +9,7 @@ import Contact from "./sections/Contact.jsx";
 import Hero from "./sections/Hero.jsx";
 import Projects from "./sections/Projects.jsx";
 import Software from "./sections/Software.jsx";
+import Testimonials from "./sections/Testimonials.jsx";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ export default function App() {
               <About />
               <Software />
               <Projects />
+              <Testimonials />
               <Contact />
             </main>
             <Footer />

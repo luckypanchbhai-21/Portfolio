@@ -25,15 +25,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}>
           <p className="mb-5 inline-flex rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-bold text-electric backdrop-blur">
-            Freelance Video Editor
+            Video Editor for Brands & Creators
           </p>
           <h1 className="text-balance text-5xl font-black leading-[0.98] sm:text-6xl lg:text-7xl">
-            Lucky edits videos that feel expensive, fast, and unforgettable.
+            I turn raw footage into premium videos that stop the scroll and sell the story.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Cinematic reels, creator videos, product launches, and
-            scroll-stopping social edits built with precise pacing, clean
-            motion, and polished sound design.
+            For founders, brands, creators, and campaigns that want stronger retention,
+            a cleaner story, and content that feels premium on every platform.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <Button href="#projects">

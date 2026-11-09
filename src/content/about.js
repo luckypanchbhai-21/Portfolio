@@ -1,6 +1,6 @@
 export const about = {
   intro:
-    "Lucky is a freelance video editor crafting high-retention edits for creators, brands, and founders. Every cut is shaped around story, rhythm, emotion, and platform-native polish.",
+    "Lucky helps founders, creators, and brands turn raw footage into sharp, high-retention stories that look premium and feel effortless. From reels to launch films, every edit is built around rhythm, clarity, and platform-ready impact.",
   skills: [
     "Cinematic editing",
     "Short-form reels",
